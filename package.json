@@ -1,0 +1,24 @@
+{
+  "name": "results-h4a",
+  "version": "1.0.0",
+  "description": "Show timetables with results and standings of handball teams and leagues provided by Handball4All.de.",
+  "main": "results-h4a/results-h4a.php",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "sports",
+    "handball",
+    "h4a",
+    "results",
+    "timetable",
+    "standing"
+  ],
+  "author": "Yannick Zipf",
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-newer": "^1.4.0"
+  }
+}

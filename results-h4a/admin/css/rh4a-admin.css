@@ -1,0 +1,17 @@
+.rh4a-transition {
+    transition: all 0.3s ease;
+}
+.rh4a-background-error {
+    background-color: darkred !important;
+}
+.rh4a-background-success {
+    background-color: rgb(4, 114, 77) !important;
+}
+
+.rh4a-change-status-link:hover {
+    cursor: pointer;
+}
+
+.rh4a-mt-1 {
+    margin-top: 1rem;
+}

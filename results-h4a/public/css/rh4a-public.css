@@ -1,0 +1,45 @@
+.rh4a-own-team-span {
+    font-weight: bold;
+}
+.rh4a-timetable tr:nth-child(even),
+.rh4a-standing tr:nth-child(even) {
+    background: rgba(0,0,0,0.1);
+}
+
+.rh4a-standing .rh4a-own-team-row td {
+    font-weight: bold;
+}
+
+.rh4a-location-wrapper {
+    position: relative;
+    text-align: center;
+}
+.rh4a-location-wrapper .rh4a-location-icon {
+    display: inline;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.rh4a-location-wrapper .rh4a-location-popover {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    z-index: 100;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+.rh4a-location-wrapper .rh4a-location-icon:hover {
+    cursor: pointer;
+}
+.rh4a-location-wrapper .rh4a-location-icon:hover ~ .rh4a-location-popover {
+    opacity: 1;
+}
+.rh4a-location-name {
+    font-weight: bold;
+}

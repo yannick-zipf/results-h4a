@@ -1,0 +1,267 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a-"
+"free\n"
+"POT-Creation-Date: 2022-03-03 19:30:39+00:00\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: admin/class-rh4a-admin-standing.php:19
+msgid "Results H4A - Standings"
+msgstr "Results H4A - Tabellen"
+
+#: admin/class-rh4a-admin-standing.php:20
+msgid "RH4A Standings"
+msgstr "RH4A Tabellen"
+
+#: admin/class-rh4a-admin-standing.php:32
+#: admin/class-rh4a-admin-timetable.php:32
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/class-rh4a-admin-standing.php:33
+#: admin/class-rh4a-admin-standing.php:98
+#: admin/class-rh4a-admin-timetable.php:33
+#: admin/class-rh4a-admin-timetable.php:84
+msgid "Description"
+msgstr "Beschreibung"
+
+#: admin/class-rh4a-admin-standing.php:34
+#: admin/class-rh4a-admin-timetable.php:35
+#: admin/class-rh4a-admin-timetable.php:108
+msgid "ID"
+msgstr "ID"
+
+#: admin/class-rh4a-admin-standing.php:35
+#: admin/class-rh4a-admin-timetable.php:36
+msgid "Highlight"
+msgstr "Hervorheben"
+
+#: admin/class-rh4a-admin-standing.php:36
+#: admin/class-rh4a-admin-timetable.php:37
+msgid "Status"
+msgstr "Status"
+
+#: admin/class-rh4a-admin-standing.php:37
+#: admin/class-rh4a-admin-standing.php:59
+#: admin/class-rh4a-admin-timetable.php:38
+#: admin/class-rh4a-admin-timetable.php:61
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: admin/class-rh4a-admin-standing.php:60
+#: admin/class-rh4a-admin-timetable.php:62
+msgid "Delete"
+msgstr "Löschen"
+
+#: admin/class-rh4a-admin-standing.php:102
+msgid "League ID"
+msgstr "Liga ID"
+
+#: admin/class-rh4a-admin-standing.php:105
+msgid "Supply LeagueID."
+msgstr "Gib eine Liga ID ein."
+
+#: admin/class-rh4a-admin-standing.php:109
+#: admin/class-rh4a-admin-timetable.php:115
+msgid "Team name (Optional)"
+msgstr "Team-Name (Optional)"
+
+#: admin/class-rh4a-admin-standing.php:112
+msgid "Supply team name to highlight your team."
+msgstr "Gib einen Teamnamen an, um ein Team hervorzuheben."
+
+#: admin/class-rh4a-admin-standing.php:116
+msgid "Invisible Columns (Optional)"
+msgstr "Spalten ausblenden (Optional)"
+
+#: admin/class-rh4a-admin-standing.php:118
+msgid "Matches"
+msgstr "Spiele"
+
+#: admin/class-rh4a-admin-standing.php:119
+msgid "Wins"
+msgstr "Siege"
+
+#: admin/class-rh4a-admin-standing.php:120
+msgid "Ties"
+msgstr "Unentschieden"
+
+#: admin/class-rh4a-admin-standing.php:121
+msgid "Losses"
+msgstr "Niederlagen"
+
+#: admin/class-rh4a-admin-standing.php:122
+#: public/class-rh4a-render-standing.php:43
+msgid "Goals"
+msgstr "Tore"
+
+#: admin/class-rh4a-admin-standing.php:123
+msgid "Difference"
+msgstr "Tordifferenz"
+
+#: admin/class-rh4a-admin-standing.php:124
+msgid "Check the columns you want to hide."
+msgstr "Setze einen Haken bei den Spalten, die Du ausblenden möchtest."
+
+#: admin/class-rh4a-admin-standing.php:129
+msgid "Save Standing"
+msgstr "Tabelle speichern"
+
+#: admin/class-rh4a-admin-standing.php:141
+#: admin/class-rh4a-admin-timetable.php:137
+msgid "Please fill a description."
+msgstr "Bitte gib eine Beschreibung ein."
+
+#: admin/class-rh4a-admin-standing.php:145
+#: admin/class-rh4a-admin-timetable.php:149
+msgid "Please provide a valid ID."
+msgstr "Bitte gib eine ID ein."
+
+#: admin/class-rh4a-admin-timetable.php:19
+msgid "Results H4A - Timetables"
+msgstr "Results H4A - Spielpläne"
+
+#: admin/class-rh4a-admin-timetable.php:20
+msgid "RH4A Timetables"
+msgstr "RH4A Spielpläne"
+
+#: admin/class-rh4a-admin-timetable.php:34
+#: admin/class-rh4a-admin-timetable.php:88
+#: admin/class-rh4a-admin-timetable.php:91
+msgid "Type"
+msgstr "Typ"
+
+#: admin/class-rh4a-admin-timetable.php:111
+msgid "Supply TeamID or LeagueID depending on chosen type."
+msgstr "Gib je nach gewähltem Typ die TeamID oder LeagueID an."
+
+#: admin/class-rh4a-admin-timetable.php:118
+msgid "Only relevant for type LEAGUE to highlight your team."
+msgstr ""
+"Nur relevant, wenn Du beim Typ Liga eine Mannschaft hervorheben möchtest."
+
+#: admin/class-rh4a-admin-timetable.php:123
+msgid "Save Timetable"
+msgstr "Spielplan speichern"
+
+#: admin/class-rh4a-admin-timetable.php:145
+msgid "Please choose a valid type."
+msgstr "Bitte wähle einen korrekten Typ aus."
+
+#: admin/class-rh4a-admin-timetable.php:197
+msgid "League"
+msgstr "Liga"
+
+#: admin/class-rh4a-admin-timetable.php:201
+msgid "Team"
+msgstr "Team"
+
+#: admin/class-rh4a-admin.php:102 admin/class-rh4a-admin.php:115
+msgid "No handler for item type found."
+msgstr "Keinen Handler für diesen Element-Typ gefunden."
+
+#: admin/class-rh4a-general-settings.php:15
+msgid "Results H4A - Options"
+msgstr "Results H4A - Optionen"
+
+#: admin/class-rh4a-general-settings.php:16
+msgid "RH4A Options"
+msgstr "RH4A Optionen"
+
+#: admin/class-rh4a-general-settings.php:39
+msgid "Settings Saved"
+msgstr "Einstellungen gespeichert"
+
+#: admin/class-rh4a-general-settings.php:51
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: admin/class-rh4a-general-settings.php:65
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: admin/class-rh4a-general-settings.php:75
+msgid "Cache active"
+msgstr "Cache aktiv"
+
+#: admin/class-rh4a-general-settings.php:86
+msgid "Default CSS active"
+msgstr "Standard CSS aktiv"
+
+#: admin/class-rh4a-shortcode-abstract.php:46
+msgid "The item was edited successfully."
+msgstr "Das Element wurde erfolgreich gespeichert."
+
+#: admin/class-rh4a-shortcode-abstract.php:46
+#: admin/class-rh4a-shortcode-abstract.php:65
+msgid "Back to overview"
+msgstr "Zurück zur Übersicht"
+
+#: admin/class-rh4a-shortcode-abstract.php:48
+#: admin/class-rh4a-shortcode-abstract.php:67
+msgid "That didn't work as espected. Please try again."
+msgstr "Das hat nicht geklappt. Bitte versuche es noch einmal."
+
+#: admin/class-rh4a-shortcode-abstract.php:65
+msgid "The item was created successfully."
+msgstr "Das Element wurde erfolgreich erstellt."
+
+#: admin/class-rh4a-shortcode-abstract.php:80
+msgid "Add new"
+msgstr "Erstellen"
+
+#: admin/class-rh4a-shortcode-abstract.php:89
+msgid "Active"
+msgstr "Aktiv"
+
+#: admin/class-rh4a-shortcode-abstract.php:89
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: public/class-rh4a-render-standing.php:37
+msgid "#"
+msgstr "#"
+
+#: public/class-rh4a-render-standing.php:38
+msgid "Club"
+msgstr "Verein"
+
+#: public/class-rh4a-render-standing.php:39
+msgid "Games"
+msgstr "Spiele"
+
+#: public/class-rh4a-render-standing.php:40
+msgid "W"
+msgstr "S"
+
+#: public/class-rh4a-render-standing.php:41
+msgid "T"
+msgstr "U"
+
+#: public/class-rh4a-render-standing.php:42
+msgid "L"
+msgstr "N"
+
+#: public/class-rh4a-render-standing.php:44
+msgid "Diff."
+msgstr "Diff."
+
+#: public/class-rh4a-render-standing.php:45
+msgid "Points"
+msgstr "Punkte"
+
+#. Plugin Name of the plugin/theme
+msgid "Results for Handball4All"
+msgstr "Results for Handball4All"
+
+#. Author of the plugin/theme
+msgid "Yannick Zipf"
+msgstr "Yannick Zipf"
