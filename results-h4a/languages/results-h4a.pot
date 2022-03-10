@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Results for Handball4All 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a\n"
-"POT-Creation-Date: 2022-03-10 19:03:24+00:00\n"
+"POT-Creation-Date: 2022-03-10 20:09:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:34
 #: admin/class-rh4a-admin-timetable.php:35
-#: admin/class-rh4a-admin-timetable.php:108
+#: admin/class-rh4a-admin-timetable.php:111
 msgid "ID"
 msgstr ""
 
@@ -60,67 +60,117 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:102
-msgid "League ID"
+#: admin/class-rh4a-admin-standing.php:101
+#: admin/class-rh4a-admin-timetable.php:87
+msgid ""
+"The description is only for your reference. It will not be shown on the "
+"frontend."
 msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:105
-msgid "Supply LeagueID."
+msgid "League ID"
 msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:109
-#: admin/class-rh4a-admin-timetable.php:115
-msgid "Team name (Optional)"
+msgid "Supply LeagueID."
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:110
+#: admin/class-rh4a-admin-timetable.php:116
+msgid ""
+"Visit www.handball4all.de and navigate via the links on the page to the site "
+"that shows the data you want to integrate into WordPress."
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:111
+#: admin/class-rh4a-admin-timetable.php:117
+msgid "Examples:"
 msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:112
-msgid "Supply team name to highlight your team."
+#: admin/class-rh4a-admin-timetable.php:118
+msgid ""
+"- Timetable for League & Standing: https://www.handball4all.de/home/portal/"
+"bhv#/league?ogId=35&lId=67731"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:113
+#: admin/class-rh4a-admin-timetable.php:119
+msgid ""
+"- Timetable for Team: https://www.handball4all.de/home/portal/bhv#/league?"
+"ogId=35&lId=67731&tId=720111"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:114
+#: admin/class-rh4a-admin-timetable.php:120
+msgid "From the URL you can see the corresponding IDs:"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:115
+#: admin/class-rh4a-admin-timetable.php:121
+msgid "- lId = League ID (e.g. 67731)"
 msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:116
-msgid "Invisible Columns (Optional)"
-msgstr ""
-
-#: admin/class-rh4a-admin-standing.php:118
-msgid "Matches"
-msgstr ""
-
-#: admin/class-rh4a-admin-standing.php:119
-msgid "Wins"
-msgstr ""
-
-#: admin/class-rh4a-admin-standing.php:120
-msgid "Ties"
+#: admin/class-rh4a-admin-timetable.php:122
+msgid "- tId = Team ID (e.g. 720111)"
 msgstr ""
 
 #: admin/class-rh4a-admin-standing.php:121
+#: admin/class-rh4a-admin-timetable.php:127
+msgid "Team name (Optional)"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:124
+msgid ""
+"Supply team name to highlight your team. Must exactly match the team name "
+"shown in the standing."
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:128
+msgid "Invisible Columns (Optional)"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:130
+msgid "Matches"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:131
+msgid "Wins"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:132
+msgid "Ties"
+msgstr ""
+
+#: admin/class-rh4a-admin-standing.php:133
 msgid "Losses"
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:122
+#: admin/class-rh4a-admin-standing.php:134
 #: public/class-rh4a-render-standing.php:43
 msgid "Goals"
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:123
+#: admin/class-rh4a-admin-standing.php:135
 msgid "Difference"
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:124
+#: admin/class-rh4a-admin-standing.php:136
 msgid "Check the columns you want to hide."
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:129
+#: admin/class-rh4a-admin-standing.php:141
 msgid "Save Standing"
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:141
-#: admin/class-rh4a-admin-timetable.php:137
+#: admin/class-rh4a-admin-standing.php:153
+#: admin/class-rh4a-admin-timetable.php:149
 msgid "Please fill a description."
 msgstr ""
 
-#: admin/class-rh4a-admin-standing.php:145
-#: admin/class-rh4a-admin-timetable.php:149
+#: admin/class-rh4a-admin-standing.php:157
+#: admin/class-rh4a-admin-timetable.php:161
 msgid "Please provide a valid ID."
 msgstr ""
 
@@ -133,32 +183,34 @@ msgid "RH4A Timetables"
 msgstr ""
 
 #: admin/class-rh4a-admin-timetable.php:34
-#: admin/class-rh4a-admin-timetable.php:88
 #: admin/class-rh4a-admin-timetable.php:91
+#: admin/class-rh4a-admin-timetable.php:94
 msgid "Type"
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:111
+#: admin/class-rh4a-admin-timetable.php:115
 msgid "Supply TeamID or LeagueID depending on chosen type."
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:118
-msgid "Only relevant for type LEAGUE to highlight your team."
+#: admin/class-rh4a-admin-timetable.php:130
+msgid ""
+"Only relevant for type LEAGUE to highlight your team. Must exactly match the "
+"team name shown in the timetable."
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:123
+#: admin/class-rh4a-admin-timetable.php:135
 msgid "Save Timetable"
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:145
+#: admin/class-rh4a-admin-timetable.php:157
 msgid "Please choose a valid type."
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:197
+#: admin/class-rh4a-admin-timetable.php:209
 msgid "League"
 msgstr ""
 
-#: admin/class-rh4a-admin-timetable.php:201
+#: admin/class-rh4a-admin-timetable.php:213
 msgid "Team"
 msgstr ""
 

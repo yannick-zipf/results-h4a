@@ -82,7 +82,10 @@ class RH4A_Admin_Timetable extends RH4A_Shortcode_Abstract {
             <table class="form-table" role="presentation">
                 <tr>
                     <th scope="row"><label for="rh4a_timetable_description"><?php _e('Description', 'results-h4a'); ?></label></th>
-                    <td><input id="rh4a_timetable_description" name="rh4a_timetable_description" type="text" value="<?php echo esc_html($values['description']); ?>" maxlength="255" class="regular-text"></td>
+                    <td>
+                        <input id="rh4a_timetable_description" name="rh4a_timetable_description" type="text" value="<?php echo esc_html($values['description']); ?>" maxlength="255" class="regular-text">
+                        <p class="description"><?php _e('The description is only for your reference. It will not be shown on the frontend.', 'results-h4a'); ?></p>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row"><?php _e('Type', 'results-h4a'); ?></th>
@@ -108,14 +111,23 @@ class RH4A_Admin_Timetable extends RH4A_Shortcode_Abstract {
                     <th scope="row"><label for="rh4a_timetable_objkey"><?php _e('ID', 'results-h4a'); ?></label></th>
                     <td>
                         <input id="rh4a_timetable_objkey" name="rh4a_timetable_objkey" type="text" value="<?php echo esc_html($values['objkey']); ?>" class="regular-text">
-                        <p class="description"><?php _e('Supply TeamID or LeagueID depending on chosen type.', 'results-h4a'); ?></p>
+                        <p class="description">
+                            <?php _e('Supply TeamID or LeagueID depending on chosen type.', 'results-h4a'); ?><br><br>
+                            <?php _e('Visit www.handball4all.de and navigate via the links on the page to the site that shows the data you want to integrate into WordPress.', 'results-h4a'); ?><br><br>
+                            <strong><?php _e('Examples:', 'results-h4a'); ?></strong><br>
+                            <?php _e('- Timetable for League & Standing: https://www.handball4all.de/home/portal/bhv#/league?ogId=35&lId=67731', 'results-h4a'); ?><br>
+                            <?php _e('- Timetable for Team: https://www.handball4all.de/home/portal/bhv#/league?ogId=35&lId=67731&tId=720111', 'results-h4a'); ?><br><br>
+                            <?php _e('From the URL you can see the corresponding IDs:', 'results-h4a'); ?><br>
+                            <?php _e('- lId = League ID (e.g. 67731)', 'results-h4a'); ?><br>
+                            <?php _e('- tId = Team ID (e.g. 720111)', 'results-h4a'); ?><br>
+                        </p>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row"><label for="rh4a_timetable_highlight"><?php _e('Team name (Optional)', 'results-h4a'); ?></label></th>
                     <td>
                         <input id="rh4a_timetable_highlight" name="rh4a_timetable_highlight" type="text" value="<?php echo esc_html($values['highlight']); ?>" class="regular-text">
-                        <p class="description"><?php _e('Only relevant for type LEAGUE to highlight your team.', 'results-h4a'); ?></p>
+                        <p class="description"><?php _e('Only relevant for type LEAGUE to highlight your team. Must exactly match the team name shown in the timetable.', 'results-h4a'); ?></p>
                     </td>
                 </tr>
             </table>
