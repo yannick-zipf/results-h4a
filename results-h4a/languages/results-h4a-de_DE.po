@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a-"
-"free\n"
-"POT-Creation-Date: 2022-03-03 19:30:39+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a\n"
+"POT-Creation-Date: 2022-03-10 19:03:24+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -164,7 +163,7 @@ msgstr "Liga"
 msgid "Team"
 msgstr "Team"
 
-#: admin/class-rh4a-admin.php:102 admin/class-rh4a-admin.php:115
+#: admin/class-rh4a-admin.php:103 admin/class-rh4a-admin.php:116
 msgid "No handler for item type found."
 msgstr "Keinen Handler für diesen Element-Typ gefunden."
 
@@ -261,6 +260,14 @@ msgstr "Punkte"
 #. Plugin Name of the plugin/theme
 msgid "Results for Handball4All"
 msgstr "Results for Handball4All"
+
+#. Description of the plugin/theme
+msgid ""
+"Show timetables with results and standings of handball teams and leagues "
+"provided by handball4all.de."
+msgstr ""
+"Zeige Spielpläne mit Ergebnissen und Tabellen von Handball-Teams und -"
+"Ligen an, die von handball4all.de zur Verfügung gestellt werden."
 
 #. Author of the plugin/theme
 msgid "Yannick Zipf"
