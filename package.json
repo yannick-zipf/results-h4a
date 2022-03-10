@@ -4,7 +4,8 @@
   "description": "Show timetables with results and standings of handball teams and leagues provided by Handball4All.de.",
   "main": "results-h4a/results-h4a.php",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "translate": "./translate.sh"
   },
   "keywords": [
     "sports",
