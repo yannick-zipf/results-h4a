@@ -59,9 +59,14 @@ From the URL you can see the corresponding IDs:
 Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or post as a shortcode.
 
 == Screenshots ==
-1. Description 1
-2. Description 2
-3. Description 3
+1. Frontend: Standing with team highlighted (German) (Theme: Twenty-Twenty-One)
+2. Frontend: Timetable of type league with team highlighted (German) (Theme: Twenty-Twenty-One)
+3. Frontend: Timetable of type team (German) (Theme: Twenty-Twenty-One)
+4. Backend: Standings overview (German)
+5. Backend: Standing edit page (German)
+6. Backend: Timetables overview (German)
+7. Backend: Timetable edit page (German)
+8. Backend: General Options (German)
 
 == Changelog ==
 = [1.0.0] 2022-03-05 =
