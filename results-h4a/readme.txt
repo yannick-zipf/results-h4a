@@ -22,6 +22,9 @@ Easily integrate the data provided by Handball4All on your website. You will cre
 * Activate or deactivate individual shortcodes without disturbing your remaining content.
 * Remove default CSS if you want to style the items yourself.
 
+= Credits =
+[Beach Vectors by Vecteezy](https://www.vecteezy.com/free-vector/beach)
+
 == Installation ==
 Installing the plugin is easy. Just follow one of the following methods:
 
