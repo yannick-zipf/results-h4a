@@ -3,6 +3,7 @@ Contributors: yannickzipf
 Tags: sports, handball, h4a, results, timetable, standing
 Tested up to: 5.9
 Requires PHP: 7.0
+Requires at least: 5.0
 Stable tag: 1.0.0
 License: GPLv2 or later
 
