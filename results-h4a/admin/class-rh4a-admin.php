@@ -69,9 +69,9 @@ class Results_H4A_Admin {
 	 * Show messages in the admin section. Static function called from everywhere.
 	 */
 	public static function show_msg($content, $type, $linktext = '', $linkhref = '') {
-        echo '<div class="notice notice-' . $type . ' is-dismissible"><p>' . $content;
+        echo '<div class="notice notice-' . esc_attr($type) . ' is-dismissible"><p>' . esc_html($content);
 		if("" !== $linktext && "" !== $linkhref) {
-			echo  ' <a href="'.$linkhref.'">'.$linktext.'</a>';
+			echo  ' <a href="' . esc_url($linkhref) . '">' . esc_html($linktext) . '</a>';
 		}
 		echo '</p></div>';
     }
