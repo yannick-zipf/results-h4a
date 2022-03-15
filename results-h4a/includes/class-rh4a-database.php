@@ -30,22 +30,26 @@ class RH4A_DB {
      * Private functions, that execute queries
      */
     private function get_items( $table ) {
-        return $this->wpdb->get_results("SELECT * FROM {$this->wpdb->prefix}{$table}");
+        $table = $this->wpdb->prefix . $table;
+        return $this->wpdb->get_results("SELECT * FROM $table");
     }
     private function get_item( $ID, $table ) {
-        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM {$this->wpdb->prefix}{$table} WHERE ID = %d", $ID), ARRAY_A);
+        $table = $this->wpdb->prefix . $table;
+        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM $table WHERE ID = %d", $ID), ARRAY_A);
     }
     private function save_item($item, $ID, $table ) {
+        $table = $this->wpdb->prefix . $table;
         if($ID > 0) {
             // Edit
-            return $this->wpdb->update("{$this->wpdb->prefix}{$table}", $item, array("ID" => $ID));
+            return $this->wpdb->update($table, $item, array("ID" => $ID));
         } else {
             // Create
-            return $this->wpdb->insert("{$this->wpdb->prefix}{$table}", $item);
+            return $this->wpdb->insert($table, $item);
         }
     } 
     private function delete_item( $ID, $table ) {
-        return $this->wpdb->delete("{$this->wpdb->prefix}{$table}", array("ID" => $ID), array("%d"));
+        $table = $this->wpdb->prefix . $table;
+        return $this->wpdb->delete($table, array("ID" => $ID), array("%d"));
     }
 
     /**
@@ -84,7 +88,9 @@ class RH4A_DB {
      * Called by uninstall.php
      */
     public function delete_tables() {
-        $this->wpdb->query( sprintf( "DROP TABLE IF EXISTS %s", $this->wpdb->prefix . self::DB_TABLE_TIMETABLE ) );
-        $this->wpdb->query( sprintf( "DROP TABLE IF EXISTS %s", $this->wpdb->prefix . self::DB_TABLE_STANDING ) );
+        $table = $this->wpdb->prefix . self::DB_TABLE_TIMETABLE;
+        $this->wpdb->query( "DROP TABLE IF EXISTS $table" );
+        $table = $this->wpdb->prefix . self::DB_TABLE_STANDING;
+        $this->wpdb->query( "DROP TABLE IF EXISTS $table" );
     }
 }
