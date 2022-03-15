@@ -73,7 +73,7 @@ class Results_H4A_Public {
 	 */
 	public function enqueue_styles() {
 		$options = get_option('rh4a_options');
-		$css_active = $options['rh4a_default_css_active'];
+		$css_active = $options['rh4a_default_css_active'] ?? null;
 		if(isset($css_active) && intval($css_active)) {
 			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rh4a-public.css', array(), $this->version, 'all' );
 		}

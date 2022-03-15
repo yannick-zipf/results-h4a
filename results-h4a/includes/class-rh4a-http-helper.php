@@ -29,7 +29,7 @@ class RH4A_HTTP_Helper {
         if(!empty($url) && !empty($objkey)) {
 
             $options = get_option('rh4a_options');
-            $cache = $options['rh4a_cache_active'];
+            $cache = $options['rh4a_cache_active'] ?? null ;
             $refresh = false;
             if(isset($cache) && intval($cache)) {
                 $cached_obj = get_transient($this->get_transient_name($type, $objkey));
