@@ -15,7 +15,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version. Using https://semver.org
  */
-define( 'PLUGIN_VERSION', '1.0.0' );
+define( 'RH4A_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
@@ -23,7 +23,7 @@ define( 'PLUGIN_VERSION', '1.0.0' );
  */
 function activate_results_h4a() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rh4a-activator.php';
-	RH4A_Activator::activate( PLUGIN_VERSION );
+	RH4A_Activator::activate( RH4A_VERSION );
 }
 register_activation_hook( __FILE__, 'activate_results_h4a' );
 

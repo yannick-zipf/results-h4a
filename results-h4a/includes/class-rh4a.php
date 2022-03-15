@@ -28,8 +28,8 @@ class Results_H4A {
 	 *
 	 */
 	public function __construct() {
-		if ( defined( 'PLUGIN_VERSION' ) ) {
-			$this->version = PLUGIN_VERSION;
+		if ( defined( 'RH4A_VERSION' ) ) {
+			$this->version = RH4A_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
