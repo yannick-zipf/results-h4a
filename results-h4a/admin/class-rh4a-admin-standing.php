@@ -146,8 +146,8 @@ class RH4A_Admin_Standing extends RH4A_Shortcode_Abstract {
 
     protected function verify_item() {
         $error = false;
-        $desc = $_POST['rh4a_standing_description'];
-        $objkey = $_POST['rh4a_standing_objkey'];
+        $desc = sanitize_text_field($_POST['rh4a_standing_description']);
+        $objkey = sanitize_key($_POST['rh4a_standing_objkey']);
         if(!isset($desc) or empty($desc)) {
             $error = true;
             Results_H4A_Admin::show_msg(__('Please fill a description.', 'results-h4a'), "error");

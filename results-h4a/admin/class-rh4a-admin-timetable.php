@@ -140,10 +140,9 @@ class RH4A_Admin_Timetable extends RH4A_Shortcode_Abstract {
 
     protected function verify_item() {
         $error = false;
-        $desc = $_POST['rh4a_timetable_description'];
-        $type = $_POST['rh4a_timetable_type'];
-        $objkey = $_POST['rh4a_timetable_objkey'];
-        $highlight = $_POST['rh4a_timetable_highlight'];
+        $desc = sanitize_text_field($_POST['rh4a_timetable_description']);
+        $type = sanitize_text_field($_POST['rh4a_timetable_type']);
+        $objkey = sanitize_key($_POST['rh4a_timetable_objkey']);
         if(!isset($desc) or empty($desc)) {
             $error = true;
             Results_H4A_Admin::show_msg(__('Please fill a description.', 'results-h4a'), "error");
