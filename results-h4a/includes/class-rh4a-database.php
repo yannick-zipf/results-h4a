@@ -12,9 +12,6 @@ class RH4A_DB {
     private $wpdb; // $wpdb object
     private $cc; // charset & collate
 
-    private const DB_TABLE_TIMETABLE = "rh4a_timetable";
-    private const DB_TABLE_STANDING = "rh4a_standing";
-
     public function __construct() {
         global $wpdb;
         $this->wpdb = $wpdb;
@@ -27,70 +24,54 @@ class RH4A_DB {
     }
 
     /**
-     * Private functions, that execute queries
-     */
-    private function get_items( $table ) {
-        $table = $this->wpdb->prefix . $table;
-        return $this->wpdb->get_results("SELECT * FROM $table");
-    }
-    private function get_item( $ID, $table ) {
-        $table = $this->wpdb->prefix . $table;
-        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM $table WHERE ID = %d", $ID), ARRAY_A);
-    }
-    private function save_item($item, $ID, $table ) {
-        $table = $this->wpdb->prefix . $table;
-        if($ID > 0) {
-            // Edit
-            return $this->wpdb->update($table, $item, array("ID" => $ID));
-        } else {
-            // Create
-            return $this->wpdb->insert($table, $item);
-        }
-    } 
-    private function delete_item( $ID, $table ) {
-        $table = $this->wpdb->prefix . $table;
-        return $this->wpdb->delete($table, array("ID" => $ID), array("%d"));
-    }
-
-    /**
      * Timetable related functions
      */ 
     public function get_timetables() {
-        return $this->get_items( self::DB_TABLE_TIMETABLE );
+        return $this->wpdb->get_results("SELECT * FROM {$this->wpdb->prefix}rh4a_timetable");
     }
     public function get_timetable( $ID ) {
-        return $this->get_item( $ID, self::DB_TABLE_TIMETABLE );
+        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM {$this->wpdb->prefix}rh4a_timetable WHERE ID = %d", $ID), ARRAY_A);
     }
     public function save_timetable($item, $ID = -1 ) {
-        return $this->save_item( $item, $ID, self::DB_TABLE_TIMETABLE );
+        if($ID > 0) {
+            // Edit
+            return $this->wpdb->update("{$this->wpdb->prefix}rh4a_timetable", $item, array("ID" => $ID));
+        } else {
+            // Create
+            return $this->wpdb->insert("{$this->wpdb->prefix}rh4a_timetable", $item);
+        }
     }
     public function delete_timetable($ID) {
-        return $this->delete_item( $ID, self::DB_TABLE_TIMETABLE );
+        return $this->wpdb->delete("{$this->wpdb->prefix}rh4a_timetable", array("ID" => $ID), array("%d"));
     }
 
     /**
      * Standing related functions
      */
     public function get_standings() {
-        return $this->get_items( self::DB_TABLE_STANDING );
+        return $this->wpdb->get_results("SELECT * FROM {$this->wpdb->prefix}rh4a_standing");
     }
     public function get_standing( $ID ) {
-        return $this->get_item( $ID, self::DB_TABLE_STANDING );
+        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM {$this->wpdb->prefix}rh4a_standing WHERE ID = %d", $ID), ARRAY_A);
     }
     public function save_standing($item, $ID = -1 ) {
-        return $this->save_item( $item, $ID, self::DB_TABLE_STANDING );
+        if($ID > 0) {
+            // Edit
+            return $this->wpdb->update("{$this->wpdb->prefix}rh4a_standing", $item, array("ID" => $ID));
+        } else {
+            // Create
+            return $this->wpdb->insert("{$this->wpdb->prefix}rh4a_standing", $item);
+        }
     }
     public function delete_standing($ID) {
-        return $this->delete_item( $ID, self::DB_TABLE_STANDING );
+        return $this->wpdb->delete("{$this->wpdb->prefix}rh4a_standing", array("ID" => $ID), array("%d"));
     }
 
     /**
      * Called by uninstall.php
      */
     public function delete_tables() {
-        $table = $this->wpdb->prefix . self::DB_TABLE_TIMETABLE;
-        $this->wpdb->query( "DROP TABLE IF EXISTS $table" );
-        $table = $this->wpdb->prefix . self::DB_TABLE_STANDING;
-        $this->wpdb->query( "DROP TABLE IF EXISTS $table" );
+        $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_timetable" );
+        $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_standing" );
     }
 }

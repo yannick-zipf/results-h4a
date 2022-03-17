@@ -12,9 +12,6 @@
 
 class RH4A_Activator {
 
-    private const DB_TABLE_TIMETABLE = "rh4a_timetable";
-    private const DB_TABLE_STANDING = "rh4a_standing";
-
 	/**
 	 * Called on plugin activation.
 	 * Calls the process_database function.
@@ -55,7 +52,7 @@ class RH4A_Activator {
                 $charset_collate .= " COLLATE $wpdb->collate";
 
             $sql = "
-                CREATE TABLE {$wpdb->prefix}" . self::DB_TABLE_TIMETABLE . " (
+                CREATE TABLE {$wpdb->prefix}rh4a_timetable (
                     ID smallint NOT NULL AUTO_INCREMENT,
                     description varchar(255) NOT NULL,
                     status char(1) NOT NULL DEFAULT '1',
@@ -64,7 +61,7 @@ class RH4A_Activator {
                     highlight varchar(255) NULL,
                     PRIMARY KEY  (ID)
                 ) $charset_collate;
-                CREATE TABLE {$wpdb->prefix}" . self::DB_TABLE_STANDING . " (
+                CREATE TABLE {$wpdb->prefix}rh4a_standing (
                     ID smallint NOT NULL AUTO_INCREMENT,
                     description varchar(255) NOT NULL,
                     status char(1) NOT NULL DEFAULT '1',
