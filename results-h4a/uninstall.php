@@ -23,15 +23,7 @@ delete_option( 'rh4a_options' );
 delete_option( 'rh4a_version' );
 
 // Delete transients, if any
-$timetables = $db->get_timetables();
-foreach($timetables as $timetable) {
-    delete_transient($http->get_transient_name($timetable->type, $timetable->objkey));
-}
-
-$standings = $db->get_standings();
-foreach($standings as $standing) {
-    delete_transient($http->get_transient_name($this->http::STANDING, $standing->objkey));
-}
+$http->delete_transients($db);
 
 // Delete tables
 $db->delete_tables();

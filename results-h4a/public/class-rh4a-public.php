@@ -19,6 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rh4a-render-abstract.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rh4a-render-timetable.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rh4a-render-standing.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rh4a-render-next-match.php';
 
 class Results_H4A_Public {
 
@@ -41,6 +42,7 @@ class Results_H4A_Public {
     public function shortcodes_init() {
         add_shortcode('rh4a-timetable', [$this, 'rh4a_shortcode']);
 		add_shortcode('rh4a-standing', [$this, 'rh4a_shortcode']);
+		add_shortcode('rh4a-next-match', [$this, 'rh4a_shortcode']);
     }
     public function rh4a_shortcode($atts, $content, $tag) {
 		// ID set?
@@ -57,6 +59,9 @@ class Results_H4A_Public {
 				break;
 			case "rh4a-standing":
 				$this->renderer = new RH4A_Render_Standing($atts[0], $this->db, $this->http);
+				break;
+			case "rh4a-next-match":
+				$this->renderer = new RH4A_Render_NextMatch($atts[0], $this->db, $this->http);
 				break;
 			default:
 				// cannot happen, because if shortcode is not recognized, this function would not be run
