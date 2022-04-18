@@ -66,6 +66,27 @@ class RH4A_DB {
     public function delete_standing($ID) {
         return $this->wpdb->delete("{$this->wpdb->prefix}rh4a_standing", array("ID" => $ID), array("%d"));
     }
+    /**
+     * Next Match related functions
+     */
+    public function get_next_matches() {
+        return $this->wpdb->get_results("SELECT * FROM {$this->wpdb->prefix}rh4a_next_match");
+    }
+    public function get_next_match( $ID ) {
+        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM {$this->wpdb->prefix}rh4a_next_match WHERE ID = %d", $ID), ARRAY_A);
+    }
+    public function save_next_match($item, $ID = -1 ) {
+        if($ID > 0) {
+            // Edit
+            return $this->wpdb->update("{$this->wpdb->prefix}rh4a_next_match", $item, array("ID" => $ID));
+        } else {
+            // Create
+            return $this->wpdb->insert("{$this->wpdb->prefix}rh4a_next_match", $item);
+        }
+    }
+    public function delete_next_match($ID) {
+        return $this->wpdb->delete("{$this->wpdb->prefix}rh4a_next_match", array("ID" => $ID), array("%d"));
+    }
 
     /**
      * Called by uninstall.php
@@ -73,5 +94,6 @@ class RH4A_DB {
     public function delete_tables() {
         $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_timetable" );
         $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_standing" );
+        $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_next_match" );
     }
 }

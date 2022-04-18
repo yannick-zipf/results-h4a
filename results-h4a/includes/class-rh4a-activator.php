@@ -70,6 +70,13 @@ class RH4A_Activator {
                     invisible_columns varchar(255) NULL,
                     PRIMARY KEY  (ID)
                 ) $charset_collate;
+                CREATE TABLE {$wpdb->prefix}rh4a_next_match (
+                    ID smallint NOT NULL AUTO_INCREMENT,
+                    description varchar(255) NOT NULL,
+                    status char(1) NOT NULL DEFAULT '1',
+                    objkey varchar(255) NOT NULL,
+                    PRIMARY KEY  (ID)
+                ) $charset_collate;
             ";
 
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -77,20 +84,25 @@ class RH4A_Activator {
 
             // Check for additional, version specific updates
             
-            // Updating to 1.0.1
-            // if(version_compare('1.0.1', $installed_version)) {
-                // Do specific database updates that the dbDelta function doesn't cover, e.g. deleting columns
-                // $wpdb->query(
-                //     "ALTER TABLE {$wpdb->prefix}my_table
-                //      ADD COLUMN `count` SMALLINT(6) NOT NULL
-                //     ");
-                // Set default values for new options
-                // $rh4a_options['new_option_name'] = "default_value";
-                // update_option("rh4a_options", $rh4a_options);
-            // }
+            // Updating to 1.1.0 -> Delete transients, because the transients are used differently from now on.
+            // The whole http json reponse is now stored in the transient and not only the dataList attribute.
+            if(version_compare('1.1.0', $installed_version)) {
+                $db = new RH4A_DB();
+                $http = new RH4A_HTTP_Helper();
+                $http->delete_transients($db);
+            }  
 
             // Updating to 1.0.2
-            // ...
+            // if(version_compare('1.0.1', $installed_version)) {
+            //     // Do specific database updates that the dbDelta function doesn't cover, e.g. deleting columns
+            //     $wpdb->query(
+            //         "ALTER TABLE {$wpdb->prefix}my_table
+            //         ADD COLUMN `count` SMALLINT(6) NOT NULL
+            //         ");
+            //     // Set default values for new options
+            //     $rh4a_options['new_option_name'] = "default_value";
+            //     update_option("rh4a_options", $rh4a_options);
+            // }
 
             update_option( "rh4a_version", $version );
 

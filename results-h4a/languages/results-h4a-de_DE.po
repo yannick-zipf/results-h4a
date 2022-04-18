@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a\n"
-"POT-Creation-Date: 2022-03-10 20:09:15+00:00\n"
+"POT-Creation-Date: 2022-04-18 15:10:48+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,19 +12,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: admin/class-rh4a-admin-standing.php:19
-msgid "Results H4A - Standings"
-msgstr "Results H4A - Tabellen"
+#: admin/class-rh4a-admin-next-match.php:19
+msgid "Results H4A - Next Match"
+msgstr "Results H4A - Nächstes Spiel"
 
-#: admin/class-rh4a-admin-standing.php:20
-msgid "RH4A Standings"
-msgstr "RH4A Tabellen"
+#: admin/class-rh4a-admin-next-match.php:20
+msgid "RH4A Next Match"
+msgstr "RH4A Nä. Spiel"
 
+#: admin/class-rh4a-admin-next-match.php:32
 #: admin/class-rh4a-admin-standing.php:32
 #: admin/class-rh4a-admin-timetable.php:32
 msgid "Shortcode"
 msgstr "Shortcode"
 
+#: admin/class-rh4a-admin-next-match.php:33
+#: admin/class-rh4a-admin-next-match.php:80
 #: admin/class-rh4a-admin-standing.php:33
 #: admin/class-rh4a-admin-standing.php:98
 #: admin/class-rh4a-admin-timetable.php:33
@@ -32,22 +35,18 @@ msgstr "Shortcode"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: admin/class-rh4a-admin-standing.php:34
-#: admin/class-rh4a-admin-timetable.php:35
-#: admin/class-rh4a-admin-timetable.php:111
-msgid "ID"
-msgstr "ID"
+#: admin/class-rh4a-admin-next-match.php:34
+msgid "ID(s)"
+msgstr "ID(s)"
 
-#: admin/class-rh4a-admin-standing.php:35
-#: admin/class-rh4a-admin-timetable.php:36
-msgid "Highlight"
-msgstr "Hervorheben"
-
+#: admin/class-rh4a-admin-next-match.php:35
 #: admin/class-rh4a-admin-standing.php:36
 #: admin/class-rh4a-admin-timetable.php:37
 msgid "Status"
 msgstr "Status"
 
+#: admin/class-rh4a-admin-next-match.php:36
+#: admin/class-rh4a-admin-next-match.php:57
 #: admin/class-rh4a-admin-standing.php:37
 #: admin/class-rh4a-admin-standing.php:59
 #: admin/class-rh4a-admin-timetable.php:38
@@ -55,11 +54,13 @@ msgstr "Status"
 msgid "Edit"
 msgstr "Bearbeiten"
 
+#: admin/class-rh4a-admin-next-match.php:58
 #: admin/class-rh4a-admin-standing.php:60
 #: admin/class-rh4a-admin-timetable.php:62
 msgid "Delete"
 msgstr "Löschen"
 
+#: admin/class-rh4a-admin-next-match.php:83
 #: admin/class-rh4a-admin-standing.php:101
 #: admin/class-rh4a-admin-timetable.php:87
 msgid ""
@@ -69,14 +70,18 @@ msgstr ""
 "Die Beschreibung ist nur für Dich zur Orientierung. Sie wird nicht im "
 "Frontend angezeigt."
 
-#: admin/class-rh4a-admin-standing.php:105
-msgid "League ID"
-msgstr "Liga ID"
+#: admin/class-rh4a-admin-next-match.php:87
+#: admin/class-rh4a-admin-standing.php:34
+#: admin/class-rh4a-admin-timetable.php:35
+#: admin/class-rh4a-admin-timetable.php:111
+msgid "ID"
+msgstr "ID"
 
-#: admin/class-rh4a-admin-standing.php:109
-msgid "Supply LeagueID."
-msgstr "Gib eine Liga ID ein."
+#: admin/class-rh4a-admin-next-match.php:91
+msgid "Supply single TeamID or multiple commma-sparated TeamIDs."
+msgstr "Gib eine einzelne TeamID oder mehrere, Komma-getrennte TeamIDs an."
 
+#: admin/class-rh4a-admin-next-match.php:92
 #: admin/class-rh4a-admin-standing.php:110
 #: admin/class-rh4a-admin-timetable.php:116
 msgid ""
@@ -86,10 +91,68 @@ msgstr ""
 "Gehe auf www.handball4all.de und navigiere über die Links auf der Seite bis "
 "Du bei dem Element bist, was Du in WordPress einbinden möchtest."
 
+#: admin/class-rh4a-admin-next-match.php:93
 #: admin/class-rh4a-admin-standing.php:111
 #: admin/class-rh4a-admin-timetable.php:117
 msgid "Examples:"
 msgstr "Beispiele:"
+
+#: admin/class-rh4a-admin-next-match.php:94
+msgid ""
+"- Next matches for Team: https://www.handball4all.de/home/portal/bhv#/league?"
+"ogId=35&lId=67731&tId=720111"
+msgstr ""
+"- Nächste Spiele eines Teams: https://www.handball4all.de/home/portal/bhv#/"
+"league?ogId=35&lId=67731&tId=720111"
+
+#: admin/class-rh4a-admin-next-match.php:95
+#: admin/class-rh4a-admin-standing.php:114
+#: admin/class-rh4a-admin-timetable.php:120
+msgid "From the URL you can see the corresponding IDs:"
+msgstr "In der URL kannst Du die entsprechenden IDs sehen:"
+
+#: admin/class-rh4a-admin-next-match.php:96
+#: admin/class-rh4a-admin-standing.php:116
+#: admin/class-rh4a-admin-timetable.php:122
+msgid "- tId = Team ID (e.g. 720111)"
+msgstr "- tId = Team ID (z.B. 720111)"
+
+#: admin/class-rh4a-admin-next-match.php:102
+msgid "Save Next Match"
+msgstr "Nächstes Spiel speichern"
+
+#: admin/class-rh4a-admin-next-match.php:115
+#: admin/class-rh4a-admin-standing.php:153
+#: admin/class-rh4a-admin-timetable.php:148
+msgid "Please fill a description."
+msgstr "Bitte gib eine Beschreibung ein."
+
+#: admin/class-rh4a-admin-next-match.php:119
+#: admin/class-rh4a-admin-standing.php:157
+#: admin/class-rh4a-admin-timetable.php:160
+msgid "Please provide a valid ID."
+msgstr "Bitte gib eine ID ein."
+
+#: admin/class-rh4a-admin-standing.php:19
+msgid "Results H4A - Standings"
+msgstr "Results H4A - Tabellen"
+
+#: admin/class-rh4a-admin-standing.php:20
+msgid "RH4A Standings"
+msgstr "RH4A Tabellen"
+
+#: admin/class-rh4a-admin-standing.php:35
+#: admin/class-rh4a-admin-timetable.php:36
+msgid "Highlight"
+msgstr "Hervorheben"
+
+#: admin/class-rh4a-admin-standing.php:105
+msgid "League ID"
+msgstr "Liga ID"
+
+#: admin/class-rh4a-admin-standing.php:109
+msgid "Supply LeagueID."
+msgstr "Gib eine Liga ID ein."
 
 #: admin/class-rh4a-admin-standing.php:112
 #: admin/class-rh4a-admin-timetable.php:118
@@ -109,20 +172,10 @@ msgstr ""
 "- Spielplan eines Teams: https://www.handball4all.de/home/portal/bhv#/league?"
 "ogId=35&lId=67731&tId=720111"
 
-#: admin/class-rh4a-admin-standing.php:114
-#: admin/class-rh4a-admin-timetable.php:120
-msgid "From the URL you can see the corresponding IDs:"
-msgstr "In der URL kannst Du die entsprechenden IDs sehen:"
-
 #: admin/class-rh4a-admin-standing.php:115
 #: admin/class-rh4a-admin-timetable.php:121
 msgid "- lId = League ID (e.g. 67731)"
 msgstr "- lId = Liga ID (z.B. 67731)"
-
-#: admin/class-rh4a-admin-standing.php:116
-#: admin/class-rh4a-admin-timetable.php:122
-msgid "- tId = Team ID (e.g. 720111)"
-msgstr "- tId = Team ID (z.B. 720111)"
 
 #: admin/class-rh4a-admin-standing.php:121
 #: admin/class-rh4a-admin-timetable.php:127
@@ -174,16 +227,6 @@ msgstr "Setze einen Haken bei den Spalten, die Du ausblenden möchtest."
 msgid "Save Standing"
 msgstr "Tabelle speichern"
 
-#: admin/class-rh4a-admin-standing.php:153
-#: admin/class-rh4a-admin-timetable.php:149
-msgid "Please fill a description."
-msgstr "Bitte gib eine Beschreibung ein."
-
-#: admin/class-rh4a-admin-standing.php:157
-#: admin/class-rh4a-admin-timetable.php:161
-msgid "Please provide a valid ID."
-msgstr "Bitte gib eine ID ein."
-
 #: admin/class-rh4a-admin-timetable.php:19
 msgid "Results H4A - Timetables"
 msgstr "Results H4A - Spielpläne"
@@ -215,19 +258,19 @@ msgstr ""
 msgid "Save Timetable"
 msgstr "Spielplan speichern"
 
-#: admin/class-rh4a-admin-timetable.php:157
+#: admin/class-rh4a-admin-timetable.php:156
 msgid "Please choose a valid type."
 msgstr "Bitte wähle einen korrekten Typ aus."
 
-#: admin/class-rh4a-admin-timetable.php:209
+#: admin/class-rh4a-admin-timetable.php:208
 msgid "League"
 msgstr "Liga"
 
-#: admin/class-rh4a-admin-timetable.php:213
+#: admin/class-rh4a-admin-timetable.php:212
 msgid "Team"
 msgstr "Team"
 
-#: admin/class-rh4a-admin.php:103 admin/class-rh4a-admin.php:116
+#: admin/class-rh4a-admin.php:107 admin/class-rh4a-admin.php:120
 msgid "No handler for item type found."
 msgstr "Keinen Handler für diesen Element-Typ gefunden."
 

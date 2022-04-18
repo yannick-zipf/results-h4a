@@ -17,6 +17,7 @@ require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rh4a-general-
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rh4a-shortcode-abstract.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rh4a-admin-timetable.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rh4a-admin-standing.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rh4a-admin-next-match.php';
 
 class Results_H4A_Admin {
 
@@ -25,6 +26,7 @@ class Results_H4A_Admin {
 	private $RH4A_General_Settings;
 	private $RH4A_Admin_Timetable;
 	private $RH4A_Admin_Standing;
+	private $RH4A_Admin_NextMatch;
 	private $db;
 
 	/**
@@ -37,6 +39,7 @@ class Results_H4A_Admin {
 		$this->RH4A_General_Settings = new RH4A_Admin_General_Settings();
 		$this->RH4A_Admin_Timetable = new RH4A_Admin_Timetable($db);
 		$this->RH4A_Admin_Standing = new RH4A_Admin_Standing($db);
+		$this->RH4A_Admin_NextMatch = new RH4A_Admin_NextMatch($db);
 	}
 
     /**
@@ -56,6 +59,7 @@ class Results_H4A_Admin {
 		$this->RH4A_General_Settings->add_menu_page();
 		$this->RH4A_Admin_Timetable->add_menu_page();
 		$this->RH4A_Admin_Standing->add_menu_page();
+		$this->RH4A_Admin_NextMatch->add_menu_page();
 	}
 
 	/**
@@ -128,6 +132,9 @@ class Results_H4A_Admin {
 				break;
 			case "standing":
 				$handler = $this->RH4A_Admin_Standing;
+				break;
+			case "next-match":
+				$handler = $this->RH4A_Admin_NextMatch;
 				break;
 		}
 		return $handler;

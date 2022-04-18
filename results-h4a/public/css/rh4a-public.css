@@ -43,3 +43,20 @@
 .rh4a-location-name {
     font-weight: bold;
 }
+
+.rh4a-next-match {
+    margin-bottom: 1rem;
+}
+.rh4a-next-match span {
+    display: block;
+}
+.rh4a-next-match-class {
+    font-weight: bold;
+}  
+.rh4a-next-match-datetime {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.rh4a-next-match-location {
+    font-size: 1rem;
+}

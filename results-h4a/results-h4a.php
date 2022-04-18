@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Results for Handball4All
  * Description: Show timetables with results and standings of handball teams and leagues provided by handball4all.de.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Yannick Zipf
  * License: GPLv2 or later
  */
@@ -15,7 +15,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version. Using https://semver.org
  */
-define( 'RH4A_VERSION', '1.0.0' );
+define( 'RH4A_VERSION', '1.1.0' );
 
 /**
  * The code that runs during plugin activation.

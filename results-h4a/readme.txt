@@ -4,7 +4,7 @@ Tags: sports, handball, h4a, results, timetable, standing
 Tested up to: 5.9
 Requires PHP: 7.0
 Requires at least: 5.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 
 Show timetables with results and standings of handball teams and leagues provided by Handball4All.de.
@@ -73,5 +73,8 @@ Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or p
 8. Backend: General Options (German)
 
 == Changelog ==
+= [1.1.0] 2022-04-23 =
+* Feature: Introduce next matches
+* Feature: Change caching object to whole json response, not only dataList attribute
 = [1.0.0] 2022-03-05 =
 * Initial Version
