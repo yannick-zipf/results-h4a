@@ -2,8 +2,8 @@
 
 const
     dir = {
-        src:   'results-h4a',
-        build: '../wordpress/wp-content/plugins/results-h4a'
+        src:   'results-for-handball4all',
+        build: '../wordpress/wp-content/plugins/results-for-handball4all'
     },
     gulp          = require('gulp'),
     newer         = require('gulp-newer')
