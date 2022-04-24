@@ -86,31 +86,6 @@ class RH4A_HTTP_Helper {
         return 'rh4a_'.$type.'_'.$objkey;
     }
 
-    // Called by the uninstall.php file
-    public function delete_transients($db) {
-        $timetables = $db->get_timetables();
-        foreach($timetables as $timetable) {
-            delete_transient($this->get_transient_name($timetable->type, $timetable->objkey));
-        }
-
-        $standings = $db->get_standings();
-        foreach($standings as $standing) {
-            delete_transient($this->get_transient_name(self::STANDING, $standing->objkey));
-        }
-
-        $next_matches = $db->get_next_matches();
-        foreach($next_matches as $next_match) {
-            if(strpos($next_match->objkey, ",") !== false) {
-                $ids = explode(",", $next_match->objkey);
-                foreach($ids as $id) {
-                    delete_transient($this->get_transient_name(self::TEAM, $id));
-                }
-            } else {
-                delete_transient($this->get_transient_name(self::TEAM, $next_match->objkey));
-            }
-        }
-    }
-
     public function get_cache_timeout($data, $type) {
         switch($type) {
             case self::TEAM:

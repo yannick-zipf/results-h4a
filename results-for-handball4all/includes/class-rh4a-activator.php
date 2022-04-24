@@ -88,8 +88,7 @@ class RH4A_Activator {
             // The whole http json reponse is now stored in the transient and not only the dataList attribute.
             if(version_compare('1.1.0', $installed_version)) {
                 $db = new RH4A_DB();
-                $http = new RH4A_HTTP_Helper();
-                $http->delete_transients($db);
+                $db->delete_transients();
             }  
 
             // Updating to 1.0.2

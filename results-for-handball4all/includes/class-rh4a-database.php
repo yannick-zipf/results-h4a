@@ -96,4 +96,19 @@ class RH4A_DB {
         $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_standing" );
         $this->wpdb->query( "DROP TABLE IF EXISTS {$this->wpdb->prefix}rh4a_next_match" );
     }
+
+    /**
+     * Called by uninstall.php and the activator class
+     * @since 1.1.1
+     * Before, the delete_transients method was placed in the http helper class. There it loaded
+     * all items from the database and deleted the transients with the built-in method delete_transient.
+     * With v1.1.0 next matches were introduced which load not only the data for a team but also for the
+     * corresponding league in the background (LeagueID came from the team data).
+     * So to delete these transients as well, you would have to read the data again first and then delete
+     * them one by one, because the LeagueID is not in the db. 
+     * Using the direct db call is much faster, although not the preferred way of doing this.
+     */
+    public function delete_transients() {
+        $this->wpdb->query( "DELETE FROM {$this->wpdb->prefix}options WHERE option_name LIKE ('%\_transient\_rh4a\_%')" );
+    }
 }

@@ -23,7 +23,7 @@ delete_option( 'rh4a_options' );
 delete_option( 'rh4a_version' );
 
 // Delete transients, if any
-$http->delete_transients($db);
+$db->delete_transients();
 
 // Delete tables
 $db->delete_tables();
