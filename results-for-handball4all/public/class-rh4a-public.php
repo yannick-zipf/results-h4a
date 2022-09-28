@@ -80,7 +80,7 @@ class Results_H4A_Public {
 		$options = get_option('rh4a_options');
 		$css_active = $options['rh4a_default_css_active'] ?? null;
 		if(isset($css_active) && intval($css_active)) {
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rh4a-public.css', array(), $this->version, 'all' );
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rh4a-public.css', array('dashicons'), $this->version, 'all' );
 		}
 	}
 
