@@ -18,7 +18,7 @@ class RH4A_Admin_NextMatch extends RH4A_Shortcode_Abstract {
             'rh4a',
 			__('Results H4A - Next Match', 'results-h4a'),
 			__('RH4A Next Match', 'results-h4a'),
-			'manage_options',
+			'edit_pages',
 			$this->menu_slug,
             array( $this , 'render_html' )
 		);

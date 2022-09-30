@@ -18,7 +18,7 @@ class RH4A_Admin_Standing extends RH4A_Shortcode_Abstract {
             'rh4a',
 			__('Results H4A - Standings', 'results-h4a'),
 			__('RH4A Standings', 'results-h4a'),
-			'manage_options',
+			'edit_pages',
 			$this->menu_slug,
             array( $this , 'render_html' )
 		);

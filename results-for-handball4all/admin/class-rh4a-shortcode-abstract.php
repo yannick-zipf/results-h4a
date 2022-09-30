@@ -29,7 +29,7 @@ abstract class RH4A_Shortcode_Abstract {
 
     public function render_html() {
         // check user capabilities
-        if ( ! current_user_can( 'manage_options' ) ) {
+        if ( ! current_user_can( 'edit_pages' ) ) {
             return;
         }
         ?>

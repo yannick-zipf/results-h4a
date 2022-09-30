@@ -14,7 +14,7 @@ class RH4A_Admin_General_Settings {
         add_menu_page(
 			__('Results H4A - Options', 'results-h4a'),
 			__('RH4A Options', 'results-h4a'),
-			'manage_options',
+			'edit_pages',
 			'rh4a',
             array( $this , 'general_settings_page_html' ),
             'dashicons-analytics'
@@ -26,7 +26,7 @@ class RH4A_Admin_General_Settings {
      */
     public function general_settings_page_html() {
         // check user capabilities
-        if ( ! current_user_can( 'manage_options' ) ) {
+        if ( ! current_user_can( 'edit_pages' ) ) {
             return;
         }
     
