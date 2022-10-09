@@ -10,7 +10,7 @@ License: GPLv2 or later
 Show timetables with results and standings of handball teams and leagues provided by Handball4All.de.
 
 == Description ==
-Easily integrate the data provided by Handball4All on your website. You will create shortcodes for timetables and standings and configure them individually. An intelligent caching algorithm ensures that the data is only loaded when necessary.
+Easily integrate the data provided by Handball4All on your website. You will create shortcodes for timetables, standings and next matches and configure them individually. An intelligent caching algorithm ensures that the data is only loaded when necessary.
 
 = ✨ Features =
 * Integrate shortcodes on any pages or blog posts (also custom post types).
@@ -20,6 +20,7 @@ Easily integrate the data provided by Handball4All on your website. You will cre
 * Hide columns in standing table.
 * Create timetables for leagues and teams.
 * Highlight your team in standings and timetables.
+* Create a list of next matches for one or more teams.
 * Activate or deactivate individual shortcodes without disturbing your remaining content.
 * Remove default CSS if you want to style the items yourself.
 
@@ -65,7 +66,7 @@ Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or p
 == Screenshots ==
 1. Frontend: Standing with team highlighted (German) (Theme: Twenty-Twenty-One)
 2. Frontend: Timetable of type league with team highlighted (German) (Theme: Twenty-Twenty-One)
-3. Frontend: Timetable of type team (German) (Theme: Twenty-Twenty-One)
+3. Frontend: Next matches for two teams (German) (Theme: Twenty-Twenty-One)
 4. Backend: Standings overview (German)
 5. Backend: Standing edit page (German)
 6. Backend: Timetables overview (German)
