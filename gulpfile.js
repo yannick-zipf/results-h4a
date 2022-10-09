@@ -3,7 +3,7 @@
 const
     dir = {
         src:   'results-for-handball4all',
-        build: '../wordpress/wp-content/plugins/results-for-handball4all'
+        build: '../wordpress/wp-content/plugins/results-for-handball4all/'
     },
     gulp          = require('gulp'),
     newer         = require('gulp-newer')
