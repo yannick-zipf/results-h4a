@@ -1,5 +1,5 @@
 # Results for Handball4All
-Easily integrate the data provided by Handball4All on your website. You will create shortcodes for timetables and standings and configure them individually. An intelligent caching algorithm ensures that the data is only loaded when necessary.
+Easily integrate the data provided by Handball4All on your website. You will create shortcodes for timetables, standings and next matches and configure them individually. An intelligent caching algorithm ensures that the data is only loaded when necessary.
 
 ## Development
 To develop this plugin, you need the following folder structure:
