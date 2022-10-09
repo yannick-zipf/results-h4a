@@ -10,6 +10,13 @@
 
 class RH4A_Admin_General_Settings {
 
+    private $db;
+    protected $menu_slug = "rh4a";
+
+    public function __construct($db) {
+        $this->db = $db;
+    }
+
     public function add_menu_page() {
         add_menu_page(
 			__('Results H4A - Options', 'results-h4a'),
@@ -37,6 +44,11 @@ class RH4A_Admin_General_Settings {
         if ( isset( $_GET['settings-updated'] ) ) {
             // add settings saved message with the class of "updated"
             add_settings_error( 'rh4a_messages', 'rh4a_message', __( 'Settings Saved', 'results-h4a' ), 'updated' );
+        } else if(isset($_POST['delete_cache']) && $_POST['delete_cache'] == true) {
+            // delete cache
+            $this->db->delete_transients();
+            // print message
+            add_settings_error( 'rh4a_messages', 'rh4a_message', __( 'Cache deleted', 'results-h4a' ), 'updated' );
         }
     
         // show error/update messages
@@ -50,6 +62,12 @@ class RH4A_Admin_General_Settings {
                     do_settings_sections( 'rh4a' );
                     submit_button( __( 'Save Settings', 'results-h4a' ) );
                 ?>
+            </form>
+            <form action="admin.php?page=<?php echo $this->menu_slug; ?>" method="post">
+                <?php
+                    submit_button(__( 'Delete Cache', 'results-h4a' ), "secondary", null, false);
+                ?>
+                <input type="hidden" name="delete_cache" value="true">
             </form>
         </div>
         <?php

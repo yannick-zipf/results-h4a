@@ -98,7 +98,7 @@ class RH4A_DB {
     }
 
     /**
-     * Called by uninstall.php and the activator class
+     * Called by uninstall.php, the activator class and the general settings admin page.
      * @since 1.1.1
      * Before, the delete_transients method was placed in the http helper class. There it loaded
      * all items from the database and deleted the transients with the built-in method delete_transient.
@@ -109,6 +109,6 @@ class RH4A_DB {
      * Using the direct db call is much faster, although not the preferred way of doing this.
      */
     public function delete_transients() {
-        $this->wpdb->query( "DELETE FROM {$this->wpdb->prefix}options WHERE option_name LIKE ('%\_transient\_rh4a\_%')" );
+        $this->wpdb->query( "DELETE FROM {$this->wpdb->prefix}options WHERE option_name LIKE ('%\_transient\_rh4a\_%') OR option_name LIKE ('%\_transient\_timeout\_rh4a\_%')" );
     }
 }

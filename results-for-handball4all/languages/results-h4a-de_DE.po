@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-h4a\n"
-"POT-Creation-Date: 2022-04-18 15:10:48+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/results-for-"
+"handball4all\n"
+"POT-Creation-Date: 2022-10-09 10:04:20+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -274,31 +275,39 @@ msgstr "Team"
 msgid "No handler for item type found."
 msgstr "Keinen Handler für diesen Element-Typ gefunden."
 
-#: admin/class-rh4a-general-settings.php:15
+#: admin/class-rh4a-general-settings.php:22
 msgid "Results H4A - Options"
 msgstr "Results H4A - Optionen"
 
-#: admin/class-rh4a-general-settings.php:16
+#: admin/class-rh4a-general-settings.php:23
 msgid "RH4A Options"
 msgstr "RH4A Optionen"
 
-#: admin/class-rh4a-general-settings.php:39
+#: admin/class-rh4a-general-settings.php:46
 msgid "Settings Saved"
 msgstr "Einstellungen gespeichert"
 
 #: admin/class-rh4a-general-settings.php:51
+msgid "Cache deleted"
+msgstr "Cache geleert"
+
+#: admin/class-rh4a-general-settings.php:63
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
-#: admin/class-rh4a-general-settings.php:65
+#: admin/class-rh4a-general-settings.php:70
+msgid "Delete Cache"
+msgstr "Cache leeren"
+
+#: admin/class-rh4a-general-settings.php:85
 msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
-#: admin/class-rh4a-general-settings.php:75
+#: admin/class-rh4a-general-settings.php:95
 msgid "Cache active"
 msgstr "Cache aktiv"
 
-#: admin/class-rh4a-general-settings.php:86
+#: admin/class-rh4a-general-settings.php:106
 msgid "Default CSS active"
 msgstr "Standard CSS aktiv"
 
