@@ -36,7 +36,7 @@ class Results_H4A_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 		$this->db = $db;
-		$this->RH4A_General_Settings = new RH4A_Admin_General_Settings();
+		$this->RH4A_General_Settings = new RH4A_Admin_General_Settings($db);
 		$this->RH4A_Admin_Timetable = new RH4A_Admin_Timetable($db);
 		$this->RH4A_Admin_Standing = new RH4A_Admin_Standing($db);
 		$this->RH4A_Admin_NextMatch = new RH4A_Admin_NextMatch($db);

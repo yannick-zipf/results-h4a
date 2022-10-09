@@ -74,6 +74,7 @@ Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or p
 8. Backend: General Options (German)
 
 == Changelog ==
+* Feature: Add 'Delete cache' button on settings page
 = [1.1.1] 2022-09-28 =
 * Fix: Delete all transients with DB query
 * Fix: Enqueue dashicons on the frontend
