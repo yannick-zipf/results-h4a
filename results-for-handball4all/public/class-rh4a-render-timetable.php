@@ -31,14 +31,7 @@ class RH4A_Render_Timetable extends RH4A_Render_Abstract {
         if(count($dataList) > 0) {
             $content .= '<table class="rh4a-timetable alignwide">';
             foreach($dataList as $row) {
-                switch($type) {
-                    case $this->http::TEAM:
-                        $content .= $this->render_row($row);
-                        break;
-                    case $this->http::LEAGUE:
-                        $content .= $this->render_row($row, $highlight);
-                        break;
-                }
+                $content .= $this->render_row($row, $highlight);
             }
             $content .= '</table>';
         }

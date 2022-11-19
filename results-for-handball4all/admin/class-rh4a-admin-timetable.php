@@ -127,7 +127,7 @@ class RH4A_Admin_Timetable extends RH4A_Shortcode_Abstract {
                     <th scope="row"><label for="rh4a_timetable_highlight"><?php _e('Team name (Optional)', 'results-h4a'); ?></label></th>
                     <td>
                         <input id="rh4a_timetable_highlight" name="rh4a_timetable_highlight" type="text" value="<?php echo esc_html($values['highlight']); ?>" class="regular-text">
-                        <p class="description"><?php _e('Only relevant for type LEAGUE to highlight your team. Must exactly match the team name shown in the timetable.', 'results-h4a'); ?></p>
+                        <p class="description"><?php _e('Relevant for type LEAGUE and TEAM to highlight your team. Must exactly match the team name shown in the timetable.', 'results-h4a'); ?></p>
                     </td>
                 </tr>
             </table>
