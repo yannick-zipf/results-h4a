@@ -75,6 +75,9 @@ Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or p
 
 == Changelog ==
 * Feature: Add 'Delete cache' button on settings page
+* Feature: Highlight team name also for timetable with type team, not only type league
+= [1.2.0] 2022-09-30 =
+* Feature: Change permissions to allow editors instead of admins
 = [1.1.1] 2022-09-28 =
 * Fix: Delete all transients with DB query
 * Fix: Enqueue dashicons on the frontend
