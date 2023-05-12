@@ -44,35 +44,43 @@ class RH4A_HTTP_Helper {
             if($refresh) {
                 $response = wp_remote_get($url . $objkey);
                 $body     = wp_remote_retrieve_body( $response );
-                // Letztes "]" finden und alles dahinter abschneiden. Erstes "[" ebenfalls abschneiden.
-                $last = strrpos($body, ']');
-                $json = substr($body, 1, $last - 1);
-                $json = json_decode($json);
-                // When not type standing, then get rid of entries with no time
-                if($type !== self::STANDING) {
-                    $data = array();
-                    $tz1 = new DateTime("now", new DateTimeZone("Europe/Berlin"));
-                    $tz2 = new DateTime("now", new DateTimeZone("UTC"));
-                    $tz_offset = $tz1->getOffset() - $tz2->getOffset();
-                    foreach($json->dataList as $row) {
-                        if($row->gTime !== "" and !is_null($row->gTime)) {
-                            // Add timestamp
-                            $date = explode(".", $row->gDate);
-                            $time = explode(":", $row->gTime);
-                            $row->_timestamp = (gmmktime($time[0], $time[1], 0, $date[1], $date[0], $date[2]) - $tz_offset);
-                            $data[] = $row;
+                if(isset($body) && "" !== $body) {
+                    // Letztes "]" finden und alles dahinter abschneiden. Erstes "[" ebenfalls abschneiden.
+                    $last = strrpos($body, ']');
+                    $json = substr($body, 1, $last - 1);
+                    $json = json_decode($json);
+                    if($json !== null) {
+                        // When not type standing, then get rid of entries with no time
+                        if($type !== self::STANDING) {
+                            $data = array();
+                            $tz1 = new DateTime("now", new DateTimeZone("Europe/Berlin"));
+                            $tz2 = new DateTime("now", new DateTimeZone("UTC"));
+                            $tz_offset = $tz1->getOffset() - $tz2->getOffset();
+                            foreach($json->dataList as $row) {
+                                if($row->gTime !== "" and !is_null($row->gTime)) {
+                                    // Add timestamp
+                                    $date = explode(".", $row->gDate);
+                                    $time = explode(":", $row->gTime);
+                                    $row->_timestamp = (gmmktime($time[0], $time[1], 0, $date[1], $date[0], $date[2]) - $tz_offset);
+                                    $data[] = $row;
+                                }
+                            }
+                            $json->dataList = $data;
                         }
+                        if(isset($cache) && intval($cache)) {
+                            set_transient(
+                                $this->get_transient_name($type, $objkey), 
+                                $json, 
+                                $this->get_cache_timeout($json->dataList, $type)
+                            );
+                        }
+                        return $raw ? $json : $json->dataList;
+                    } else {
+                        return [];
                     }
-                    $json->dataList = $data;
+                } else {
+                    return [];
                 }
-                if(isset($cache) && intval($cache)) {
-                    set_transient(
-                        $this->get_transient_name($type, $objkey), 
-                        $json, 
-                        $this->get_cache_timeout($json->dataList, $type)
-                    );
-                }
-                return $raw ? $json : $json->dataList;
             } else {
                 return $raw ? $cached_obj : $cached_obj->dataList;
             }
