@@ -76,6 +76,7 @@ Just copy the shortcode (e.g. [rh4a-timetable 1]) and insert it on any page or p
 == Changelog ==
 = [1.3.1] 2023-05-12 =
 * Fix: Enhance error handling for empty results from H4A servers
+* Fix: Correct item type property in status change link for next-matches
 = [1.3.0] 2022-11-20 =
 * Feature: Add 'Delete cache' button on settings page
 * Feature: Highlight team name also for timetable with type team, not only type league
