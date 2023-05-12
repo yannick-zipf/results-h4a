@@ -44,7 +44,7 @@ class RH4A_Admin_NextMatch extends RH4A_Shortcode_Abstract {
                 <td><?php echo esc_html($next_match->objkey); ?></td>
                 <td>
                     <span class="rh4a-status-text"><?php echo $this->get_status_text(esc_html($next_match->status)); ?></span>
-                    <a  data-item-type="standing" 
+                    <a  data-item-type="next-match" 
                         data-item-id="<?php esc_html_e($next_match->ID); ?>" 
                         data-item-new-status="<?php echo esc_html($next_match->status) == 1 ? 0 : 1; ?>" 
                         data-item-status-text-active="<?php echo $this->get_status_text(1); ?>" 
